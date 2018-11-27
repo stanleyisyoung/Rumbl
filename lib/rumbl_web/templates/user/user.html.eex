@@ -1,0 +1,3 @@
+<%# This template is used by index.html and show.html %>
+<%#   split duplicate code into templates  %>
+<b><%= first_name(@user) %></b> (<%= @user.id %>)

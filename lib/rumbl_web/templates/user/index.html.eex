@@ -1,0 +1,14 @@
+<h1>Listing Users</h1>
+
+<table>
+  <%= for user <- @users do %>
+    <tr>
+      <%# Calls function from views/user_view.ex %>
+      <td><%= render "user.html", user: user %></td>
+
+      <%# Below is a Pheonix Helper func that creates HTML href links %>
+      <td><%= link "View", to: Routes.user_path(@conn, :show, user.id) %></td>
+    </tr>
+  <% end %>
+</table>
+
